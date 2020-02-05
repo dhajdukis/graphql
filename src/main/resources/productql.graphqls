@@ -1,14 +1,21 @@
 type Query {
+    # Get one product by ID
     getProductById(id: ID):Product
+    # Get products with a limit
     getAllProducts(count: Int):[Product]
 }
 type Mutation {
+    # Create product
     createProduct(name: String!, price: Int!, isAvailable: String):Product
 }
 
 type Product {
+    # Auto-generated ID
     id: ID!
+    # Product name
     name: String
+    # Price in HUF
     price: Int
+    # Product availability
     isAvailable: String
 }
