@@ -12,11 +12,11 @@ import org.springframework.stereotype.Component;
 public class ProductQuery implements GraphQLQueryResolver {
     private ProductRepository productRepository;
 
-    public ProductQuery(ProductRepository customerRepository) {
-        this.productRepository = customerRepository;
+    public ProductQuery(final ProductRepository productRepository) {
+        this.productRepository = productRepository;
     }
 
-    public Product getProductById(Long id) {
+    public Product getProductById(final Long id) {
         return productRepository
                 .findById(id)
                 .orElse(null);

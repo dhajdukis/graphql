@@ -8,7 +8,6 @@ type Mutation {
     # Create product
     createProduct(name: String!, price: Int!, isAvailable: String):Product
 }
-
 type Product {
     # Auto-generated ID
     id: ID!
